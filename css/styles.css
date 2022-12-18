@@ -134,7 +134,6 @@ header{
 }
 
 .order-button {
-    width: 170px;
     background-color: var(--iris);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 16px 32px;
@@ -150,7 +149,7 @@ header{
 
 .order-button:hover,
 .order-button:focus {
-    background: var(--iris);
+    background-color: var(--iris);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 4px;
 }
@@ -175,6 +174,7 @@ header{
     font-size: 20px;
     line-height: 1.2;
     color: var(--navy-blue);
+    margin-bottom: 8px;
 }
 /* section3 */
 .container-section-three{
@@ -282,4 +282,5 @@ footer{
 .text-footer {
     line-height: 1.5;
     color: var(--cornflower);
+    margin-top: 16px;
 }
