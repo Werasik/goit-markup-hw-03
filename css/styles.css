@@ -18,20 +18,17 @@ body {
     letter-spacing: 0.02em;
     color: var(--slate);
 }
-.content{
-    width: 1440px;
-    margin: auto;
-}
 li {
     list-style: none;
 }
 .container{
-    width: 1128px;
+    width: 1158px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 15px;
 }
-.section:not(:last-child){
-    margin-bottom: 120px;
+.section:not(:first-child){
+    padding-top: 120px;
 }
 .hidden{
     display: none;
@@ -51,11 +48,11 @@ div>.section-title{
 header{
     background: #FFFFFF;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    padding:24px 0;
 }
 .container-header{
-    display:flex;
+    display: flex;
     align-items: center;
-    padding: 24px 0;
 }
 .logo-header {
     font-family: 'Raleway';
@@ -72,9 +69,11 @@ header{
 .web-logo {
     color: var(--iris);
 }
+.nav-header{
+    margin-right: auto;
+}
 .nav-list{
     display: flex;
-    margin-right:331px;
 }
 .nav-list li:not(:last-child){
     margin-right: 40px;
@@ -84,10 +83,6 @@ header{
     font-weight: 600;
     line-height: 1.5;
     color: var(--navy-blue);
-}
-
-.nav-link:visited {
-    color: inherit;
 }
 
 .nav-link:hover,
@@ -115,22 +110,26 @@ header{
     background-color: var(--navy-blue);
 }
 .container-section-one{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     padding-top: 192px;
     padding-bottom: 192px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 .main-title {
     font-weight: 600;
     font-size: 56px;
     line-height: 1.07;
     color: #FFFFFF;
-    padding-bottom: 48px;
+    margin-bottom: 48px;
     text-align: center;
+    width: 492px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .order-button {
+    display: inline-block;
     background-color: var(--iris);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 16px 32px;
@@ -139,7 +138,6 @@ header{
     font-weight: 600;
     line-height: 1.19;
     font-size: 16px;
-    align-items: center;
     letter-spacing: 0.04em;
     color: #FFFFFF;
 }
@@ -159,9 +157,7 @@ header{
     display: flex;
 }
 .feature-item{
-    display: flex;
-    flex-direction: column;
-    width: 264px;
+    flex-basis: calc((100% - 3 * 24px) / 4 );
 }
 .feature-item:not(:last-child){
     margin-right: 24px;
@@ -174,8 +170,16 @@ header{
     margin-bottom: 8px;
 }
 /* section3 */
+.section-three{
+    padding-bottom: 120px;
+}
 .container-section-three{
     flex-direction: column;
+}
+.img-section-three{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 .img-list{
     display: flex;
@@ -188,8 +192,11 @@ header{
 /* section4 */
 .section-four{
     background-color: var(--cloud);
-    margin-top: 120px;
-    padding-top: 120px;
+    padding: 120px 0;
+}
+.section-four-content{
+    margin: 32px 16px;
+    text-align: center;
 }
 .section-four-list{
     display: flex;
@@ -198,11 +205,6 @@ header{
     background-color: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
-    margin-bottom: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
 }
 
 .section-four-item:not(:last-child){
@@ -214,11 +216,9 @@ header{
     font-size: 20px;
     line-height: 1.2;
     color: var(--navy-blue);
-    margin-top: 32px;
+    margin-bottom: 8px;
 }
-.section-four-text{
-    margin: 8px auto 32px auto;
-}
+
 /* footer */
 footer{
     background-color: var(--navy-blue);
@@ -247,13 +247,13 @@ footer{
     margin-top: 16px;
 }
 /* portfolio */
-.container-portfolio{
-    margin-bottom: 120px;
+.section-portfolio{
+    padding-top: 96px;
+    padding-bottom: 120px;
 }
 .portfolio-button-list{
     display: flex;
     justify-content: center;
-    margin-top: 96px;
     margin-bottom: 72px;
 }
 .portfolio-button {
@@ -281,20 +281,25 @@ footer{
     display: flex;
     flex-wrap: wrap;
 }
-
 .portfolio-block{
     display: flex;
     flex-direction: column;
     border: 0.5px solid var(--cloud);
     box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229, 0px 1px 6px 0px #2E2F4214;
 }
+.portfolio-block:not(:nth-last-child(-n + 3)){
+    margin-bottom: 48px;
+}
 .portfolio-block:not(:nth-child(3n)){
     margin-right: 24px;
 }
 .block-content{
+    padding-top: 32px;
+    padding-bottom: 32px;
     padding-left: 16px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+}
+.img-portfolio{
+
 }
 .picture-text {
     color: var(--cloud);
